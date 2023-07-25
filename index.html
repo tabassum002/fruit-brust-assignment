@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Brust</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
@@ -24,16 +24,344 @@
     </script>
 </head>
 <body>
-    
+
 <header>
+   
+    <!-- navbar section -->
+
+    <header class="p-4 dark:bg-gray-800  text-white">
+        <div class="container flex justify-between h-16 mx-auto border-b-2 border-amber-500 bg-rose-600 rounded-full">
+            <ul class="items-stretch hidden space-x-3 lg:flex">
+                <li class="flex">
+                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Home</a>
+                </li>
+                <li class="flex">
+                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">About US</a>
+                </li>
+                <li class="flex">
+                    <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Shop</a>
+                </li>
+
+                <li class="flex">
+                    <a class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent ">All Fruits</a>
+                
+                </li>
+            </ul>
+            <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2 gap-3">
+                <img src="./images/logo.png" alt="">
+                <p>Fruit Burst</p>
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-8 h-8 dark:text-violet-400"> -->
+                    <path d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z"></path>
+                    <path d="M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z"></path>
+                </svg>
+            </a>
+            <div class="flex items-center md:space-x-4">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                        <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+                            <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 dark:text-gray-100">
+                                <path d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z"></path>
+                            </svg>
+                        </button>
+                    </span>
+
+                    <input type="search" placeholder="Search Here...." class="input input-bordered input-error w-full max-w-xs rounded-full" />
+
+                    <!-- <input type="search" name="Search" placeholder="Search Here...." class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900"> -->
+                </div>
+                
+            </div>
+            <button title="Open menu" type="button" class="p-4 lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-100">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+
+
+
+
+
+<!-- Slider heading section -->
+
+<div class="carousel w-full">
+    <div id="slide1" class="carousel-item relative w-full">
+    
+    
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-md">
+                <h2 class="text-6xl font-bold">Exotic tastes at your <br> doorstep</h2>
+                <p>We supply highly quality organic products</p>
+                <button class="btn btn-outline btn-primary">Shop Now</button>
+              </div>
+            </div>
+    
+    
+    <!-- <div> -->
+
+
+
+
+        <!-- </div> -->
+
+      <img src="./images/banner1.png" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide4" class="btn btn-circle">❮</a> 
+        <a href="#slide2" class="btn btn-circle">❯</a>
+      </div>
+    </div> 
+
+    <div id="slide2" class="carousel-item relative w-full">
+      <img src="./images/banner2.png" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide1" class="btn btn-circle">❮</a> 
+        <a href="#slide3" class="btn btn-circle">❯</a>
+      </div>
+    </div> 
+    <div id="slide3" class="carousel-item relative w-full">
+      <img src="./images/banner3.png" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide2" class="btn btn-circle">❮</a> 
+        <a href="#slide4" class="btn btn-circle">❯</a>
+      </div>
+    </div> 
+    <div id="slide4" class="carousel-item relative w-full">
+      <img src="./images/banner4.png" class="w-full" />
+      <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+        <a href="#slide3" class="btn btn-circle">❮</a> 
+        <a href="#slide1" class="btn btn-circle">❯</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
 
 </header>
 
 <main>
 
+<!-- deal of the day section -->
+
+
+<section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5 my-10">
+
+<div class="flex justify-around">
+
+<div>
+
+<h1>Deal of the day</h1>
+
+<p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+</div>
+
+
+<div class="flex gap-8">
+
+<ul class="flex gap-8">
+<li>
+    <p>29</p>
+    <p>Days </p>
+</li>
+<li>
+    <p>15</p>
+    <p>Hours</p>
+</li>
+<li>
+<p>25</p>
+<p>Minutes</p>
+</li>
+<li>
+<p>08</p>
+<p>Seconds</p>
+</li>
+
+
+</ul>
+
+</div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- team section -->
+<section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5 my-10">
+<div class="hero min-h-screen" style="background-image: url(./images/team.png);">
+    <div class="hero-overlay bg-opacity-80"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
+        <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+<div>
+    <div class="avatar">
+        <div class="w-24 -top-100 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+          <img src="./images/member1.png"/>
+        </div>
+      </div>
+<h1>Awlad Hossain</h1>
+<p>Fruits Expert</p>
+
+
+    </div> 
+
+
+<div class="flex flex-col items-center justify-center -top-100">
+	<div class="flex space-x-5">
+		
+        <div class="flex flex-col">
+            <img alt="" class="w-20 h-20 rounded-full ring ring-primary dark:bg-white-500 ri ri" src="./images/member1.png">
+            <h1>Awlad Hossain</h1>
+            <p>Fruits Expert</p>
+
+            <ul class="grid grid-flow-col gap-4">
+
+
+<li><i class="fa-brands fa-facebook"></i></li>
+<li><i class="fa-brands fa-twitter"></i></li>
+<li><i class="fa-brands fa-linkedin"></i></li>
+
+            </ul>
+
+        </div>
+
+        <div class="flex flex-col">
+		<img alt="" class="w-20 h-20 rounded-full ri ri dark:bg-gray-500 ri ri" src="./images/member2.png">
+        <h1>Safia Chowdhury</h1>
+       <p>Fruits Expert</p>
+
+       <ul class="grid grid-flow-col gap-4">
+
+
+        <li><i class="fa-brands fa-facebook"></i></li>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-linkedin"></i></li>
+        
+                    </ul>
+
+
+    </div>
+
+
+    <div>
+		<img alt="" class="w-20 h-20 rounded-full ri ri dark:bg-gray-500 ri ri" src="./images/member3.png">
+
+        <h1>Rokib Hossain</h1>
+        <p>Fruits Expert</p>
+
+        <ul class="grid grid-flow-col gap-4">
+
+
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-linkedin"></i></li>
+            
+                        </ul>
+
+    </div>
+
+
+    <div>
+		<img alt="" class="w-20 h-20 rounded-full ri ri dark:bg-gray-500 ri ri" src="./images/member4.png">
+
+        <h1>Chaity</h1>
+        <p>Fruits Expert</p>
+        <ul class="grid grid-flow-col gap-4">
+
+
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-linkedin"></i></li>
+            
+                        </ul>
+    </div>
+	</div>
+</div>
+
+
+
+
+  </div>
+</section>
+
 </main>
 
 <footer>
+
+    <footer class="footer footer-center p-10 bg-black text-white text-base-content rounded">
+<div class="flex">
+<img src="./images/logo.png" alt="">
+<p>Fruit Burst</p>
+
+</div>
+
+        <div class="grid grid-flow-col gap-4">
+          <a class="link link-hover">About us</a> 
+          <a class="link link-hover">Home</a> 
+          <a class="link link-hover">Shop</a> 
+          <a class="link link-hover">All Fruits</a>
+          <a class="link link-hover">Support</a>
+          <a class="link link-hover">My Account</a>
+
+        </div> 
+        <div>
+          <div class="grid grid-flow-col gap-4">
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a> 
+            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" class="fill-current">
+            <path d="M36.1216 36V35.9988H36.1296V24.2628C36.1296 18.5216 34.8936 14.0988 28.1816 14.0988C24.9548 14.0988 22.7896 15.8696 21.9056 17.548H21.8124V14.6348H15.4484V35.9988H22.0752V25.42C22.0752 22.6348 22.6032 19.9412 26.0524 19.9412C29.4512 19.9412 29.5016 23.12 29.5016 25.5984V36H36.1216Z" fill="white"/>
+            <path d="M4.65761 14.636H11.2924V36H4.65761V14.636Z" fill="white"/>
+            <path d="M7.97241 4C5.85081 4 4.12961 5.7212 4.12961 7.8428C4.12961 9.9644 5.85081 11.7216 7.97241 11.7216C10.094 11.7216 11.8152 9.9644 11.8152 7.8428C11.8136 5.7212 10.0924 4 7.97241 4Z" fill="white"/>
+          </svg></a>
+        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_12_5283)">
+              <path d="M40.0905 11.7601C39.9968 9.63476 39.6531 8.17359 39.1607 6.90748C38.6528 5.56353 37.8714 4.36029 36.8477 3.36003C35.8474 2.34421 34.6362 1.55487 33.3078 1.05489C32.0344 0.562549 30.5809 0.218854 28.4555 0.125146C26.3143 0.0235031 25.6345 0 20.2038 0C14.773 0 14.0933 0.0235031 11.96 0.11721C9.83463 0.210918 8.37347 0.554918 7.10766 1.04696C5.7634 1.55487 4.56016 2.33627 3.55991 3.36003C2.54408 4.36029 1.75505 5.57146 1.25477 6.89985C0.762424 8.17359 0.418729 9.62682 0.325021 11.7522C0.223378 13.8934 0.199875 14.5732 0.199875 20.0039C0.199875 25.4347 0.223378 26.1144 0.317085 28.2477C0.410793 30.3731 0.754793 31.8342 1.24714 33.1003C1.75505 34.4443 2.54408 35.6475 3.55991 36.6478C4.56016 37.6636 5.77134 38.4529 7.09972 38.9529C8.37347 39.4453 9.82669 39.789 11.9524 39.8827C14.0853 39.9767 14.7654 39.9999 20.1962 39.9999C25.6269 39.9999 26.3067 39.9767 28.44 39.8827C30.5653 39.789 32.0265 39.4453 33.2923 38.9529C35.9805 37.9136 38.1058 35.7882 39.1452 33.1003C39.6372 31.8266 39.9812 30.3731 40.0749 28.2477C40.1686 26.1144 40.1921 25.4347 40.1921 20.0039C40.1921 14.5732 40.1842 13.8934 40.0905 11.7601ZM36.4884 28.0914C36.4023 30.0449 36.0742 31.0998 35.8007 31.8031C35.1286 33.5457 33.7456 34.9287 32.003 35.6008C31.2997 35.8743 30.2372 36.2024 28.2913 36.2882C26.1815 36.3822 25.5488 36.4054 20.2117 36.4054C14.8747 36.4054 14.234 36.3822 12.1318 36.2882C10.1783 36.2024 9.12343 35.8743 8.42017 35.6008C7.553 35.2803 6.76366 34.7724 6.12297 34.1082C5.45878 33.4596 4.95086 32.6782 4.63037 31.811C4.35688 31.1078 4.02875 30.0449 3.94298 28.0994C3.84896 25.9896 3.82577 25.3565 3.82577 20.0195C3.82577 14.6824 3.84896 14.0417 3.94298 11.9399C4.02875 9.98639 4.35688 8.93149 4.63037 8.22823C4.95086 7.36075 5.45878 6.57172 6.1309 5.93072C6.77922 5.26653 7.56063 4.75862 8.42811 4.43843C9.13137 4.16494 10.1942 3.83681 12.1398 3.75073C14.2496 3.65703 14.8826 3.63352 20.2194 3.63352C25.5643 3.63352 26.1971 3.65703 28.2992 3.75073C30.2527 3.83681 31.3076 4.16494 32.0109 4.43843C32.8781 4.75862 33.6674 5.26653 34.3081 5.93072C34.9723 6.57935 35.4802 7.36075 35.8007 8.22823C36.0742 8.93149 36.4023 9.99402 36.4884 11.9399C36.5821 14.0497 36.6056 14.6824 36.6056 20.0195C36.6056 25.3565 36.5821 25.9816 36.4884 28.0914Z" fill="white"/>
+              <path d="M20.2038 9.72845C14.531 9.72845 9.92834 14.3308 9.92834 20.0039C9.92834 25.677 14.531 30.2793 20.2038 30.2793C25.8769 30.2793 30.4792 25.677 30.4792 20.0039C30.4792 14.3308 25.8769 9.72845 20.2038 9.72845ZM20.2038 26.6693C16.5236 26.6693 13.5384 23.6844 13.5384 20.0039C13.5384 16.3234 16.5236 13.3385 20.2038 13.3385C23.8843 13.3385 26.8692 16.3234 26.8692 20.0039C26.8692 23.6844 23.8843 26.6693 20.2038 26.6693Z" fill="white"/>
+              <path d="M33.2846 9.32218C33.2846 10.6469 32.2105 11.721 30.8855 11.721C29.5608 11.721 28.4866 10.6469 28.4866 9.32218C28.4866 7.99716 29.5608 6.92334 30.8855 6.92334C32.2105 6.92334 33.2846 7.99716 33.2846 9.32218Z" fill="white"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_12_5283">
+                <rect width="24" height="24" fill="white" transform="translate(0.129608)"/>
+              </clipPath>
+            </defs>
+          </svg></a>
+        
+        
+        </div>
+        </div> 
+        <div>
+          <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+        </div>
+      </footer>
+
+
+
+
+
+
 
 </footer>
 
