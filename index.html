@@ -12,6 +12,19 @@
       rel="stylesheet"
       type="text/css"/>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+.font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
+</style>
+
+
     <script>
       tailwind.config = {
         theme: {
@@ -30,9 +43,9 @@
    
     <!-- navbar section -->
 
-    <header class="p-4 text-white max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5 my-10">
+    <header class=" font-lato text-white max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5 my-10">
         <div class="container flex justify-between h-20 mx-auto border-b-4 bg-rose-600 rounded-full">
-            <ul class="items-stretch hidden space-x-3 lg:flex">
+            <ul class="items-stretch hidden space-x-3 ml-5 lg:flex">
                 <li class="flex">
                     <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent dark:text-violet-400 dark:border-violet-400">Home</a>
                 </li>
@@ -48,12 +61,16 @@
                 
                 </li>
             </ul>
-            <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2 gap-3">
+            <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2 gap-3 mr-4">
                 <img src="./images/logo.png" alt="">
                 <p>Fruit Burst</p>
 
             </a>
-            <div class="flex items-center md:space-x-4">
+
+        
+                <label for="Search" class="hidden">Search</label>
+
+            <div class="flex items-center md:space-x-4 mr-8 relative">
                 <div class="relative">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-2">
                         <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
@@ -63,8 +80,12 @@
                         </button>
                     </span>
 
-                    <input type="search" placeholder="Search Here...." class="input input-bordered input-error w-full max-w-xs rounded-full py-6"/>
+                    <input type="search" placeholder="Search Here...." class="input input-bordered input-error w-full max-w-xs rounded-full py-6 mr-12"/>
 
+
+                </div>
+            </div>
+        
                  <!-- <svg class="text-black-400" xmlns="http://www.w3.org/2000/svg" width="24" -->
                     <!-- height="24" viewBox="0 0 24  -->
                                     <!-- 24" fill="none"> -->
@@ -81,15 +102,15 @@
 
 
                     <!-- <input type="search" name="Search" placeholder="Search Here...." class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900"> -->
-                </div>
                 
-            </div>
-            <button title="Open menu" type="button" class="p-4 lg:hidden">
+                
+            
+            <!-- <button title="Open menu" type="button" class="p-4 lg:hidden"> -->
 
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-100">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+                <!--  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 dark:text-gray-100"> --> 
+                    <!-- < <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> -->
+                <!-- </svg> -->
+            <!-- </button> -->
         </div>
     </header>
 
@@ -102,7 +123,7 @@
 
 
 
-<section class="py-6 max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 my-10 text-white">
+<section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 my-10 text-white">
 	
 
 
@@ -112,7 +133,7 @@
           <!-- <img src="./images/banner1.png" class="w-full"  /> -->
 <!-- hero -->
 
-<div class="hero min-w-screen" style="background-image: url(./images/banner1.png);">
+<div class="hero max-w-screen-2xl" style="background-image: url(./images/banner1.png);">
     <div class="hero-overlay bg-opacity-70"></div>
     <div class="hero-content text-center text-neutral-content">
       <div class="max-w-md">
