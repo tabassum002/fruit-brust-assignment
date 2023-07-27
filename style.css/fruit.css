@@ -5,11 +5,12 @@
 }
 
 .hr{
-        display: block;
-        /* margin-bottom: 0.5em; */
-        border-style: inset;
-        border-width: 2px;
-        border-bottom: 1px solid black;
+    
+     margin-top: 8px;
+    border-bottom: 1px solid black;
+        gap: 5px;
+        width:50%;
+    
 }
 
 
